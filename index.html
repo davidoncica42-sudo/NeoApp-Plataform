@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080a14" />
+    <meta name="description" content="NeoApp: explora, gana recompensas y encuentra tu lugar entre las estrellas." />
+    <title>NeoApp — Tu universo, a tu manera</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-2.8L12 2Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 12 7-12 7V5Z"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 9h18M16 15h2"/></symbol>
+    </svg>
+
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" data-route="inicio" aria-label="NeoApp, inicio">
+        <span class="brand-mark"><svg class="icon"><use href="#i-spark"/></svg></span>
+        <span class="brand-word">neo<span>app</span></span>
+      </a>
+
+      <button class="menu-toggle icon-button" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a class="nav-link is-active" href="#inicio" data-route="inicio" aria-current="page">Inicio</a>
+        <a class="nav-link" href="#info" data-route="info">Información</a>
+        <a class="nav-link" href="#globales" data-route="globales">Recompensas globales</a>
+        <a class="nav-link" href="#tienda" data-route="tienda">Tienda EUR</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="points-pill" type="button" data-route="cuenta" aria-label="Ver tu saldo de estrellas">
+          <svg class="icon"><use href="#i-star"/></svg><span id="header-points">2.450</span><span class="points-label">estrellas</span>
+        </button>
+        <button class="icon-button cart-button" id="open-cart" type="button" aria-label="Abrir cesta">
+          <svg class="icon"><use href="#i-bag"/></svg><span class="cart-count" id="cart-count">0</span>
+        </button>
+        <a class="account-link" href="#cuenta" data-route="cuenta"><span class="avatar avatar-small">N</span><span>Mi cuenta</span></a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-view page-home is-visible" data-page-view="inicio" aria-labelledby="hero-title">
+        <div class="hero section-shell">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> UN UNIVERSO HECHO PARA TI</div>
+            <h1 id="hero-title">Tu universo,<br /><span>a tu manera.</span></h1>
+            <p class="hero-description">Descubre una nueva forma de conectar, ganar recompensas y llevar tu experiencia digital más lejos.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#globales" data-route="globales">Explorar recompensas <svg class="icon"><use href="#i-arrow"/></svg></a>
+              <a class="button button-quiet" href="#info" data-route="info"><span class="play-icon"><svg class="icon"><use href="#i-play"/></svg></span> Conoce NeoApp</a>
+            </div>
+            <div class="hero-note"><span class="online-indicator"></span> Tu próxima aventura empieza aquí</div>
+          </div>
+
+          <div class="hero-art" aria-label="Ilustración de un planeta azul en el espacio">
+            <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+            <div class="planet-glow"></div>
+            <div class="planet"><div class="planet-shine"></div><div class="planet-land land-one"></div><div class="planet-land land-two"></div><div class="planet-ring-shadow"></div></div>
+            <div class="orbit-dot dot-one"></div><div class="orbit-dot dot-two"></div><div class="orbit-dot dot-three"></div>
+            <div class="floating-card floating-card-top"><span class="mini-icon mint"><svg class="icon"><use href="#i-spark"/></svg></span><span><strong>+120</strong><small>estrellas hoy</small></span></div>
+            <div class="floating-card floating-card-bottom"><span class="mini-avatar">✦</span><span><strong>Un mundo por descubrir</strong><small>La comunidad crece contigo</small></span></div>
+          </div>
+        </div>
+
+        <div class="stat-strip section-shell">
+          <div class="stat-item"><strong>01</strong><span>Un solo lugar<br />para explorar</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><strong>∞</strong><span>Posibilidades<br />por descubrir</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><strong>24/7</strong><span>Tu universo<br />siempre abierto</span></div>
+          <div class="stat-caption">HECHO PARA EXPLORADORES <svg class="icon"><use href="#i-spark"/></svg></div>
+        </div>
+
+        <div class="section-shell home-featured">
+          <div class="section-heading">
+            <div><span class="eyebrow">TU EXPERIENCIA NEOAPP</span><h2>Hay mucho más <span>por explorar.</span></h2></div>
+            <a class="text-link" href="#info" data-route="info">Descubrir NeoApp <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="feature-grid">
+            <a class="feature-card feature-global" href="#globales" data-route="globales">
+              <div class="feature-card-top"><span class="feature-icon"><svg class="icon"><use href="#i-globe"/></svg></span><span class="card-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></div>
+              <div><span class="card-kicker">PARA TODA LA COMUNIDAD</span><h3>Recompensas<br />globales</h3><p>Canjea tus estrellas por sorpresas de otro mundo.</p></div>
+              <div class="feature-stars" aria-hidden="true">✦ &nbsp; ✧ &nbsp; ✦</div>
+            </a>
+            <a class="feature-card feature-store" href="#tienda" data-route="tienda">
+              <div class="feature-card-top"><span class="feature-icon"><svg class="icon"><use href="#i-wallet"/></svg></span><span class="card-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></div>
+              <div><span class="card-kicker">COSAS QUE TE ENCANTAN</span><h3>Una tienda<br />fuera de órbita</h3><p>Descubre artículos digitales y dale brillo a tu espacio.</p></div>
+              <div class="store-orb" aria-hidden="true">€</div>
+            </a>
+            <a class="feature-card feature-account" href="#cuenta" data-route="cuenta">
+              <div class="feature-card-top"><span class="feature-icon"><svg class="icon"><use href="#i-user"/></svg></span><span class="card-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></div>
+              <div><span class="card-kicker">TU ESPACIO, TUS REGLAS</span><h3>Todo tu mundo<br />en una cuenta</h3><p>Tu perfil, tus estrellas y lo que vas desbloqueando.</p></div>
+              <div class="account-planet" aria-hidden="true"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-view" data-page-view="info" aria-labelledby="info-title" hidden>
+        <div class="page-hero section-shell compact-hero">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> MÁS QUE UNA PLATAFORMA</div>
+          <h1 id="info-title">Un espacio para<br /><span>todo lo que viene.</span></h1>
+          <p>NeoApp conecta tu vida digital en un solo universo. Explora, participa, gana y descubre nuevas formas de disfrutar cada día.</p>
+        </div>
+        <div class="section-shell info-layout">
+          <div class="info-intro-card"><div class="info-orb"><svg class="icon"><use href="#i-spark"/></svg></div><span class="card-kicker">LA IDEA ES SIMPLE</span><h2>Un universo.<br /><span>Infinitas posibilidades.</span></h2><p>Queremos que cada visita a NeoApp te deje algo bueno: una recompensa, una idea nueva o una conexión inesperada.</p><a class="button button-primary" href="#globales" data-route="globales">Empieza a explorar <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+          <div class="info-points">
+            <article class="info-point"><span class="info-number">01</span><div><h3>Todo en un solo lugar</h3><p>Tu cuenta reúne experiencias, recompensas y novedades en un mismo espacio.</p></div><span class="point-mark">✦</span></article>
+            <article class="info-point"><span class="info-number">02</span><div><h3>Premiamos tu curiosidad</h3><p>Participa, suma estrellas y canjéalas por beneficios dentro del universo NeoApp.</p></div><span class="point-mark">✦</span></article>
+            <article class="info-point"><span class="info-number">03</span><div><h3>Un universo en expansión</h3><p>Nuevas experiencias y sorpresas llegan para que siempre haya algo por descubrir.</p></div><span class="point-mark">✦</span></article>
+            <article class="info-point"><span class="info-number">04</span><div><h3>Diseñado para ti</h3><p>Una experiencia clara, cómoda y lista para acompañarte desde cualquier dispositivo.</p></div><span class="point-mark">✦</span></article>
+          </div>
+        </div>
+        <div class="section-shell info-banner"><div><span class="eyebrow">¿LISTO PARA EL DESPEGUE?</span><h2>Tu aventura empieza<br />con un primer paso.</h2></div><a class="button button-light" href="#cuenta" data-route="cuenta">Ver mi cuenta <svg class="icon"><use href="#i-arrow"/></svg></a><div class="banner-moon" aria-hidden="true"></div></div>
+      </section>
+
+      <section class="page-view" data-page-view="globales" aria-labelledby="global-title" hidden>
+        <div class="page-hero section-shell store-hero">
+          <div><div class="eyebrow"><span class="eyebrow-dot"></span> TU ESFUERZO, EN ESTRELLAS</div><h1 id="global-title">Recompensas<br /><span>para todos.</span></h1><p>Canjea tus estrellas por objetos digitales y ventajas para personalizar tu universo NeoApp.</p></div>
+          <div class="balance-card"><span class="balance-icon"><svg class="icon"><use href="#i-star"/></svg></span><span class="balance-label">TU SALDO ACTUAL</span><strong id="balance-points">2.450</strong><span>estrellas disponibles</span><a href="#cuenta" data-route="cuenta">Ver mi actividad <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="section-shell catalog-section">
+          <div class="catalog-toolbar"><div><span class="eyebrow">CATÁLOGO NEOAPP</span><h2>Elige tu próxima <span>recompensa.</span></h2></div><label class="search-box"><span class="sr-only">Buscar recompensas</span><svg class="icon"><use href="#i-spark"/></svg><input id="reward-search" type="search" placeholder="Buscar recompensas" autocomplete="off" /></label></div>
+          <div class="filter-row" role="group" aria-label="Filtrar recompensas"><button class="filter-chip is-selected" type="button" data-filter="all">Todas</button><button class="filter-chip" type="button" data-filter="cosmeticos">Cosméticos</button><button class="filter-chip" type="button" data-filter="ventajas">Ventajas</button><button class="filter-chip" type="button" data-filter="extras">Extras</button></div>
+          <div class="catalog-grid reward-grid">
+            <article class="catalog-card reward-card" data-category="cosmeticos" data-search="halo aurora perfil marco avatar"><div class="product-art art-halo"><div class="halo-shape"></div><span class="art-label">01 / COSMOS</span></div><div class="product-copy"><div class="product-meta"><span>MARCO DE PERFIL</span><span class="availability"><i></i> Disponible</span></div><h3>Halo Aurora</h3><p>Un brillo cósmico para destacar en cualquier galaxia.</p><div class="product-footer"><span class="reward-price"><svg class="icon"><use href="#i-star"/></svg> 850</span><button class="button button-outline redeem-button" type="button" data-cost="850" data-name="Halo Aurora">Canjear</button></div></div></article>
+            <article class="catalog-card reward-card" data-category="ventajas" data-search="impulso orbital estrellas doble puntos"><div class="product-art art-boost"><div class="boost-orb"><span>2×</span></div><span class="art-label">02 / IMPULSO</span></div><div class="product-copy"><div class="product-meta"><span>IMPULSO DE 24 H</span><span class="availability"><i></i> Disponible</span></div><h3>Impulso orbital</h3><p>Duplica las estrellas que consigas durante un día.</p><div class="product-footer"><span class="reward-price"><svg class="icon"><use href="#i-star"/></svg> 1.200</span><button class="button button-outline redeem-button" type="button" data-cost="1200" data-name="Impulso orbital">Canjear</button></div></div></article>
+            <article class="catalog-card reward-card" data-category="extras" data-search="tema nebulosa fondo interfaz color"><div class="product-art art-theme"><div class="theme-window"><div class="theme-top"></div><div class="theme-sun"></div><div class="theme-line"></div><div class="theme-line short"></div></div><span class="art-label">03 / PERSONALIZA</span></div><div class="product-copy"><div class="product-meta"><span>TEMA DE INTERFAZ</span><span class="availability"><i></i> Disponible</span></div><h3>Nebulosa violeta</h3><p>Cambia el paisaje de tu cuenta con un cielo único.</p><div class="product-footer"><span class="reward-price"><svg class="icon"><use href="#i-star"/></svg> 600</span><button class="button button-outline redeem-button" type="button" data-cost="600" data-name="Nebulosa violeta">Canjear</button></div></div></article>
+            <article class="catalog-card reward-card" data-category="cosmeticos" data-search="mascota lunar compañero satélite"><div class="product-art art-moon"><div class="moon-pet"><span></span><i></i></div><span class="art-label">04 / COMPAÑERO</span></div><div class="product-copy"><div class="product-meta"><span>MASCOTA DE PERFIL</span><span class="availability"><i></i> Disponible</span></div><h3>Lunita</h3><p>Un pequeño satélite que acompaña tu perfil.</p><div class="product-footer"><span class="reward-price"><svg class="icon"><use href="#i-star"/></svg> 1.800</span><button class="button button-outline redeem-button" type="button" data-cost="1800" data-name="Lunita">Canjear</button></div></div></article>
+            <article class="catalog-card reward-card" data-category="ventajas" data-search="pase explorador perfil insignia"><div class="product-art art-pass"><div class="pass-shape"><svg class="icon"><use href="#i-spark"/></svg><span>EXPLORADOR</span></div><span class="art-label">05 / DISTINCIÓN</span></div><div class="product-copy"><div class="product-meta"><span>INSIGNIA ESPECIAL</span><span class="availability"><i></i> Disponible</span></div><h3>Pase explorador</h3><p>Una insignia especial para tu perfil NeoApp.</p><div class="product-footer"><span class="reward-price"><svg class="icon"><use href="#i-star"/></svg> 950</span><button class="button button-outline redeem-button" type="button" data-cost="950" data-name="Pase explorador">Canjear</button></div></div></article>
+            <article class="catalog-card reward-card" data-category="extras" data-search="caja sorpresa mystery pack sorpresa"><div class="product-art art-mystery"><div class="mystery-box"><span>?</span></div><span class="art-label">06 / SORPRESA</span></div><div class="product-copy"><div class="product-meta"><span>CAJA SORPRESA</span><span class="availability"><i></i> Disponible</span></div><h3>Cápsula estelar</h3><p>Una pequeña sorpresa para tu próximo viaje.</p><div class="product-footer"><span class="reward-price"><svg class="icon"><use href="#i-star"/></svg> 500</span><button class="button button-outline redeem-button" type="button" data-cost="500" data-name="Cápsula estelar">Canjear</button></div></div></article>
+          </div>
+          <p class="empty-results" id="reward-empty" hidden>No encontramos recompensas con esa búsqueda.</p>
+          <p class="catalog-note"><svg class="icon"><use href="#i-spark"/></svg> Catálogo de demostración: los canjes se guardan solo en este navegador.</p>
+        </div>
+      </section>
+
+      <section class="page-view" data-page-view="tienda" aria-labelledby="store-title" hidden>
+        <div class="page-hero section-shell euro-hero">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> LA TIENDA DE NEOAPP</div><h1 id="store-title">Algo especial<br /><span>te está esperando.</span></h1><p>Objetos digitales para personalizar tu espacio y llevar tu experiencia un paso más allá.</p><div class="store-subnote"><svg class="icon"><use href="#i-check"/></svg> Precios claros en euros &nbsp;·&nbsp; Sin suscripciones ocultas</div>
+        </div>
+        <div class="section-shell catalog-section euro-catalog">
+          <div class="catalog-toolbar"><div><span class="eyebrow">ARTÍCULOS DIGITALES</span><h2>Encuentra algo <span>para ti.</span></h2></div><span class="demo-badge">VISTA PREVIA DE LA TIENDA</span></div>
+          <div class="catalog-grid euro-grid">
+            <article class="catalog-card euro-card"><div class="product-art euro-art euro-art-one"><span class="art-label">EDICIÓN DIGITAL</span><div class="customize-emblem">N<span>✦</span></div></div><div class="product-copy"><div class="product-meta"><span>PERSONALIZACIÓN</span><span class="availability"><i></i> Disponible</span></div><h3>Pack Nebulosa</h3><p>Un tema violeta, iconos y un nuevo fondo espacial.</p><div class="product-footer"><span class="euro-price">2,99 €</span><button class="button button-outline add-to-cart" type="button" data-id="nebula" data-title="Pack Nebulosa" data-price="2.99">Añadir <svg class="icon"><use href="#i-bag"/></svg></button></div></div></article>
+            <article class="catalog-card euro-card"><div class="product-art euro-art euro-art-two"><span class="art-label">SERIE LIMITADA</span><div class="avatar-stack"><span>N</span><span>✧</span><span>◉</span></div></div><div class="product-copy"><div class="product-meta"><span>AVATARES</span><span class="availability"><i></i> Disponible</span></div><h3>Órbita de avatares</h3><p>Cuatro avatares únicos para cambiar de identidad.</p><div class="product-footer"><span class="euro-price">4,50 €</span><button class="button button-outline add-to-cart" type="button" data-id="avatars" data-title="Órbita de avatares" data-price="4.50">Añadir <svg class="icon"><use href="#i-bag"/></svg></button></div></div></article>
+            <article class="catalog-card euro-card"><div class="product-art euro-art euro-art-three"><span class="art-label">ESTILO PERSONAL</span><div class="sticker-set"><span>✦</span><span>☾</span><span>✧</span><span>⋆</span></div></div><div class="product-copy"><div class="product-meta"><span>DECORACIÓN</span><span class="availability"><i></i> Disponible</span></div><h3>Set de stickers cósmicos</h3><p>Pequeños detalles para darle vida a tu perfil.</p><div class="product-footer"><span class="euro-price">1,99 €</span><button class="button button-outline add-to-cart" type="button" data-id="stickers" data-title="Set de stickers cósmicos" data-price="1.99">Añadir <svg class="icon"><use href="#i-bag"/></svg></button></div></div></article>
+            <article class="catalog-card euro-card"><div class="product-art euro-art euro-art-four"><span class="art-label">EXPERIENCIA NEOAPP</span><div class="constellation"><i></i><i></i><i></i><i></i><b></b><b></b><b></b></div></div><div class="product-copy"><div class="product-meta"><span>ACCESO ESPECIAL</span><span class="availability"><i></i> Disponible</span></div><h3>Pase de constelación</h3><p>Accede al paquete visual completo de esta temporada.</p><div class="product-footer"><span class="euro-price">7,90 €</span><button class="button button-outline add-to-cart" type="button" data-id="constellation" data-title="Pase de constelación" data-price="7.90">Añadir <svg class="icon"><use href="#i-bag"/></svg></button></div></div></article>
+          </div>
+          <p class="catalog-note"><svg class="icon"><use href="#i-spark"/></svg> Tienda de demostración. El pago aún no está conectado; no se realizará ningún cobro.</p>
+        </div>
+      </section>
+
+      <section class="page-view" data-page-view="cuenta" aria-labelledby="account-title" hidden>
+        <div class="section-shell account-shell">
+          <div class="account-heading"><div><span class="eyebrow"><span class="eyebrow-dot"></span> TU ESPACIO PERSONAL</span><h1 id="account-title">Hola, <span>explorador.</span></h1><p>Todo tu universo NeoApp, en un solo lugar.</p></div><span class="demo-badge">CUENTA DE MUESTRA</span></div>
+          <div class="account-grid">
+            <article class="profile-card"><div class="profile-cover"><div class="profile-stars">✦ &nbsp; · &nbsp; ✧ &nbsp; · &nbsp; ✦</div></div><div class="profile-body"><div class="avatar avatar-large">N</div><div class="profile-name-row"><div><h2>Neo Explorer</h2><p>@neo.explorer</p></div><span class="profile-status"><i></i> Explorando</span></div><p class="profile-bio">Viajando entre ideas, recompensas y nuevos mundos.</p><div class="profile-stats"><div><strong>08</strong><span>logros</span></div><div><strong>12</strong><span>días activo</span></div><div><strong id="account-points">2.450</strong><span>estrellas</span></div></div><button class="button button-outline edit-profile" type="button" id="sign-in-button"><svg class="icon"><use href="#i-user"/></svg> Conectar mi cuenta</button><p class="account-hint">La autenticación se conectará en una siguiente etapa.</p></div></article>
+            <div class="account-content">
+              <div class="account-summary-grid"><article class="summary-card"><span class="summary-icon summary-lilac"><svg class="icon"><use href="#i-star"/></svg></span><span class="summary-label">ESTRELLAS DISPONIBLES</span><strong id="account-summary-points">2.450</strong><a href="#globales" data-route="globales">Ver recompensas <svg class="icon"><use href="#i-arrow"/></svg></a></article><article class="summary-card"><span class="summary-icon summary-mint"><svg class="icon"><use href="#i-spark"/></svg></span><span class="summary-label">NIVEL EXPLORADOR</span><strong>01 <small>Cadete</small></strong><div class="progress-track"><span></span></div><span class="progress-caption">550 estrellas para el siguiente nivel</span></article></div>
+              <article class="activity-card"><div class="activity-heading"><div><span class="eyebrow">TU HISTORIAL</span><h2>Actividad reciente</h2></div><span class="activity-live"><i></i> En este dispositivo</span></div><div class="activity-list" id="activity-list"><div class="activity-item activity-welcome"><span class="activity-icon"><svg class="icon"><use href="#i-spark"/></svg></span><div><strong>¡Bienvenido a NeoApp!</strong><span>Tu aventura comienza aquí</span></div><time>Ahora</time></div><div class="activity-item"><span class="activity-icon activity-icon-star"><svg class="icon"><use href="#i-star"/></svg></span><div><strong>Saldo inicial</strong><span>Estrellas de muestra para explorar</span></div><time>Hoy</time></div></div><div class="activity-empty" id="activity-empty" hidden>Aún no hay movimientos. Explora las recompensas para empezar.</div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main"><a class="brand" href="#inicio" data-route="inicio"><span class="brand-mark"><svg class="icon"><use href="#i-spark"/></svg></span><span class="brand-word">neo<span>app</span></span></a><p>Un universo para descubrir lo que viene.</p><div class="footer-links"><a href="#info" data-route="info">Sobre NeoApp</a><a href="#globales" data-route="globales">Recompensas</a><a href="#tienda" data-route="tienda">Tienda</a><a href="#cuenta" data-route="cuenta">Mi cuenta</a></div><span class="footer-social">HECHO PARA EXPLORADORES <span>✦</span></span></div>
+      <div class="section-shell footer-bottom"><span>© <span id="year"></span> NeoApp. Un universo por descubrir.</span><span class="preview-label"><i></i> Vista previa interactiva</span></div>
+    </footer>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <div class="dialog-head"><div><span class="eyebrow">TIENDA NEOAPP</span><h2 id="cart-title">Tu cesta</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog aria-label="Cerrar cesta"><svg class="icon"><use href="#i-close"/></svg></button></div>
+      <div class="cart-items" id="cart-items"><div class="cart-empty"><span class="cart-empty-icon"><svg class="icon"><use href="#i-bag"/></svg></span><strong>Tu cesta está en órbita vacía.</strong><span>Añade algún artículo digital de la tienda.</span></div></div>
+      <div class="cart-total"><span>Total</span><strong id="cart-total">0,00 €</strong></div>
+      <p class="dialog-note">Vista previa: todavía no se procesan pagos ni se guardan pedidos.</p>
+      <button class="button button-primary checkout-button" id="checkout-button" type="button" disabled>Continuar <svg class="icon"><use href="#i-arrow"/></svg></button>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-mark"><svg class="icon"><use href="#i-check"/></svg></span><span id="toast-message">Listo</span></div>
+  </body>
+</html>
+
